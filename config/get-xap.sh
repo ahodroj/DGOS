@@ -54,10 +54,6 @@ if [ "$1" == "install" ]; then
 	mkdir $APP_DIR/deploy
 	mkdir $APP_DIR/work
 	mkdir $APP_DIR/logs
-	mkdir $OPTUM_CONFIG_DIR
-
-	echo "Copying space configuration properties"
-	curl -L -o $OPTUM_CONFIG_DIR/space-config.properties $SPACE_CONFIG_URL
 
 	echo "Downloading XAP scripts..."
 	curl -L -o xap-scripts.zip $XAP_SCRIPTS_URL
