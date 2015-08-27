@@ -60,7 +60,7 @@ if [ "$1" == "install" ]; then
 	unzip xap-scripts.zip -d $APP_DIR/scripts
 	
 	echo "Copying this script to $APP_DIR/scripts"
-	cp `pwd`/$0 $APP_DIR/scripts
+	cp `pwd`/get-xap.sh /gigaspaces/scripts/set-environment.sh
 	
 
 	echo "Cleaning up"
