@@ -2,6 +2,8 @@
 
 export APP_DIR=/gigaspaces
 
+sudo rm -rf $APP_DIR
+
 export JDK_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/jdk-7u21-linux-x64.tar.gz
 export XAP_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/gigaspaces-xap-premium-10.0.1-ga.zip
 export SPACE_CONFIG_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/space-config.properties
