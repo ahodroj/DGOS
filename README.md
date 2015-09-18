@@ -4,6 +4,6 @@ DGOS (Data Grid Operating System) is an in-memory data grid orchestration and sc
 ## Architecture Layers
 * **Infrastructure Orchestrator (Cloudify)**: Responsible for provisioning a Mesos & Marathon cluster on any data center or cloud. As well as scaling out horizontal Mesos slaves nodes
 * **Resource Scheduler (Mesos)**: Responsible for allocating (mostly) memory resources for provisioning XAP spaces as well, auto-rebalancing partitions, and elastic scaling. 
-* **In-Memory Fabric (XAP)**: Responsibly for hosting large-scale in-memory data grids. 
+* **In-Memory Fabric (XAP)**: Responsible for hosting large-scale in-memory data grids. 
 
 
