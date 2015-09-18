@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>groupId</groupId>
+    <artifactId>mesos-xap</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+	<pluginRepositories>
+        <pluginRepository>
+            <id>org.openspaces</id>
+            <url>http://maven-repository.openspaces.org</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.mesos</groupId>
+            <artifactId>mesos</artifactId>
+            <version>0.20.1</version>
+        </dependency>
+         
+         <dependency>
+                <groupId>com.gigaspaces</groupId>
+                <artifactId>gs-openspaces</artifactId>
+                <version>10.1.1-12800-RELEASE</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.gigaspaces</groupId>
+                <artifactId>gs-runtime</artifactId>
+                <version>10.1.1-12800-RELEASE</version>
+                <scope>provided</scope>
+            </dependency>
+            
+            <dependency>
+	            <groupId>org.slf4j</groupId>
+	            <artifactId>slf4j-api</artifactId>
+	            <version>1.7.2</version>
+	        </dependency>
+    </dependencies>
+</project>
