@@ -18,7 +18,6 @@ export NIC_ADDR=`wget -qO- http://instance-data/latest/meta-data/local-ipv4`
 
 export LOG_DIR=$XAP_TOOLS/logs
 
-export COMMON_JAVA_OPTIONS="-server -d64 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=60 -XX:+UseCMSInitiatingOccupancyOnly -XX:MaxPermSize=256m -XX:+UseCompressedOops -XX:+ExplicitGCInvokesConcurrent -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled " 
 
 # Add JVM profiler
 export COMMON_JAVA_OPTIONS="$COMMON_JAVA_OPTIONS -Dcom.gs.multicast.enabled=false "  # Multicast
