@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Marathon var: groups: $LOOKUPGROUPS"
+
 export APP_DIR=/gigaspaces
 
 export JDK_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/jdk-7u21-linux-x64.tar.gz
