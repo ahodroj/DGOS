@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Marathon var: groups: $LOOKUPGROUPS"
-
 export APP_DIR=/gigaspaces
 sudo rm -rf $APP_DIR
 
@@ -26,6 +24,12 @@ export GSM_JAVA_OPTIONS="$COMMON_JAVA_OPTIONS -Xmx1g -Xms1g"
 export LUS_JAVA_OPTIONS="$COMMON_JAVA_OPTIONS -Xmx1g -Xms1g"
 export GSA_JAVA_OPTIONS="$COMMON_JAVA_OPTIONS -Xmx256m -Xms256m"
 export EXT_JAVA_OPTIONS="-Dcom.gs.transport_protocol.lrmi.max-threads=512 -Dcom.gs.transport_protocol.lrmi.max-conn-pool=2048"
+
+# Log environment variables used
+echo "COMMON_JAVA_OPTIONS: $COMMON_JAVA_OPTIONS" >> xap-env
+echo "LOOKUPLOCATORS: $LOOKUPLOCATORS" >> xap-env
+echo "LOOKUPGROUPS: $LOOKUPGROUPS" >> xap-env
+
 
 if [ "$1" == "install" ]; then 
 	if [ -d "$APP_DIR" ]; then
