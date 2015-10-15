@@ -61,7 +61,8 @@ if [ "$1" == "install" ]; then
 
 	echo "Downloading XAP scripts..."
 	curl -L -o xap-scripts.zip $XAP_SCRIPTS_URL
-	unzip xap-scripts.zip -d $APP_DIR/scripts
+	#unzip xap-scripts.zip -d $APP_DIR/scripts
+	unzip xap-scripts.zip
 	
 	echo "Copying this script to $APP_DIR/scripts"
 	cp `pwd`/get-xap.sh /gigaspaces/scripts/set-environment.sh
