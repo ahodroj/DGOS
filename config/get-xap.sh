@@ -1,7 +1,6 @@
 #!/bin/bash
 
 export APP_DIR=/gigaspaces
-sudo rm -rf $APP_DIR
 
 export JDK_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/jdk-7u21-linux-x64.tar.gz
 export XAP_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/gigaspaces-xap-premium-10.0.1-ga.zip
@@ -32,11 +31,8 @@ echo "LOOKUPGROUPS: $LOOKUPGROUPS" >> xap-env
 
 
 if [ "$1" == "install" ]; then 
-	if [ -d "$APP_DIR" ]; then
-	        echo "$APP_DIR already exists"
-	else
-	        mkdir $APP_DIR
-	fi
+	echo "Starting clean"
+	sudo rm -rf $APP_DIR
 
 	echo "Downloading XAP 10"
 	curl -L -o gigaspaces-xap.zip $XAP_DOWNLOAD_URL
