@@ -59,18 +59,19 @@ if [ "$1" == "install" ]; then
 	mkdir $APP_DIR/work
 	mkdir $APP_DIR/logs
 
-	echo "Downloading XAP scripts..."
+	echo "Download XAP Scripts..."
 	curl -L -o xap-scripts.zip $XAP_SCRIPTS_URL
 	#unzip xap-scripts.zip -d $APP_DIR/scripts
 	unzip xap-scripts.zip
 	
-	echo "Copying this script to $APP_DIR/scripts"
-	cp `pwd`/get-xap.sh /gigaspaces/scripts/set-environment.sh
+	echo "Copying this script to set-environment.sh"
+	cp `pwd`/get-xap.sh set-environment.sh
 	
 
 	echo "Cleaning up"
 	rm -rf gigaspaces-xap.zip xap-scripts.zip jdk.tar.gz
 
+	echo "Successfully deployed XAP"
 fi;
 
 
