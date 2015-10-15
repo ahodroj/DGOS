@@ -70,4 +70,3 @@ if [ "$1" == "install" ]; then
 	echo "Successfully deployed XAP"
 fi;
 
-

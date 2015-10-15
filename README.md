@@ -7,3 +7,12 @@ DGOS (Data Grid Operating System) is an in-memory data grid orchestration and sc
 * **In-Memory Fabric (XAP)**: Responsible for hosting large-scale in-memory data grids. 
 
 
+
+
+##### Deployment of XAP on Marathon/Mesos
+
+The project includes a utility tool that one can use to fill the space with data from *.csv files or generate random entities. To run the tool, execute next script:
+
+```
+curl -X POST -H "Content-type: application/json" --data-binary @xap-grid.json http://10.8.1.254:8080/v2/apps/
+```

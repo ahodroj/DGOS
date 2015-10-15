@@ -1,0 +1,16 @@
+{
+  "id": "xap-grid",
+  "instances": 1,
+  "cpus": 2,
+  "mem": 2048,
+  "uris": [
+    "https://raw.githubusercontent.com/ahodroj/DGOS/master/config/get-xap.sh"
+  ],
+  "env": {
+	  "GSC_ZONE": "xap",
+	  "LOOKUPGROUPS": "openspaces",
+	  "LOOKUPLOCATORS": "10.41.34.196,10.40.139.183",
+	  "COMMON_JAVA_OPTIONS": "-server -d64 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=60 -XX:+UseCMSInitiatingOccupancyOnly -XX:MaxPermSize=256m -XX:+UseCompressedOops -XX:+ExplicitGCInvokesConcurrent -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled" 
+  },
+  "cmd": "echo $LOOKUPGROUPS; chmod a+x get-xap.sh && ./get-xap.sh install"
+}
