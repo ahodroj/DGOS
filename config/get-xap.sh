@@ -3,6 +3,7 @@
 echo "Marathon var: groups: $LOOKUPGROUPS"
 
 export APP_DIR=/gigaspaces
+sudo rm -rf $APP_DIR
 
 export JDK_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/jdk-7u21-linux-x64.tar.gz
 export XAP_DOWNLOAD_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/gigaspaces-xap-premium-10.0.1-ga.zip
@@ -13,8 +14,6 @@ export XAP_SCRIPTS_URL=https://s3-us-west-2.amazonaws.com/gigaspaces-optum/xap-s
 export JSHOMEDIR=$APP_DIR/gigaspaces-xap-premium-10.0.1-ga
 export GS_HOME=$JSHOMEDIR
 export JAVA_HOME=$APP_DIR/jdk/jdk1.7.0_21
-export LOOKUPGROUPS="openspaces"
-export LOOKUPLOCATORS="10.41.34.196,10.40.139.183"
 export NIC_ADDR=`wget -qO- http://instance-data/latest/meta-data/local-ipv4`
 
 export LOG_DIR=$XAP_TOOLS/logs
