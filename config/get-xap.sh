@@ -48,17 +48,11 @@ if [ "$1" == "install" ]; then
 
 	mkdir $APP_DIR/jdk
 	tar -zxvf jdk.tar.gz -C $APP_DIR/jdk
-
-	mkdir $APP_DIR/scripts
+	
 	mkdir $APP_DIR/deploy
 	mkdir $APP_DIR/work
 	mkdir $APP_DIR/logs
 
-	echo "Download XAP Scripts..."
-	curl -L -o xap-scripts.zip $XAP_SCRIPTS_URL
-	#unzip xap-scripts.zip -d $APP_DIR/scripts
-	unzip xap-scripts.zip
-	
 
 	echo "Cleaning up"
 	rm -rf gigaspaces-xap.zip jdk.tar.gz
