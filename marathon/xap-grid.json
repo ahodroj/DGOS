@@ -9,7 +9,7 @@
   "env": {
 	  "GSC_HEAP_SIZE": "1g",
 	  "GSC_ZONE": "xap",
-	  "GSC_COUNT": 1,
+	  "GSC_COUNT": "1",
 	  "LOOKUPGROUPS": "openspaces",
 	  "LOOKUPLOCATORS": "10.41.34.196,10.40.139.183",
 	  "COMMON_JAVA_OPTIONS": "-server -d64 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=60 -XX:+UseCMSInitiatingOccupancyOnly -XX:MaxPermSize=256m -XX:+UseCompressedOops -XX:+ExplicitGCInvokesConcurrent -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled" 
