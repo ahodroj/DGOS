@@ -25,9 +25,12 @@ export GSA_JAVA_OPTIONS="$COMMON_JAVA_OPTIONS -Xmx256m -Xms256m"
 export EXT_JAVA_OPTIONS="-Dcom.gs.transport_protocol.lrmi.max-threads=512 -Dcom.gs.transport_protocol.lrmi.max-conn-pool=2048"
 
 # Log environment variables used
-echo "COMMON_JAVA_OPTIONS: $COMMON_JAVA_OPTIONS" >> xap-env
-echo "LOOKUPLOCATORS: $LOOKUPLOCATORS" >> xap-env
-echo "LOOKUPGROUPS: $LOOKUPGROUPS" >> xap-env
+echo "COMMON_JAVA_OPTIONS: $COMMON_JAVA_OPTIONS" >> xap-env.log
+echo "LOOKUPLOCATORS: $LOOKUPLOCATORS" >> xap-env.log
+echo "LOOKUPGROUPS: $LOOKUPGROUPS" >> xap-env.log
+echo "GSC_HEAP_SIZE: $GSC_HEAP_SIZE" >> xap-env.log
+echo "GSC_ZONE: $GSC_ZONE" >> xap-env.log
+echo "GSC_COUNT: $GSC_COUNT" >> xap-env.log
 
 
 if [ "$1" == "install" ]; then 
