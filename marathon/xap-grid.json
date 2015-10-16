@@ -14,5 +14,5 @@
 	  "LOOKUPLOCATORS": "10.41.34.196,10.40.139.183",
 	  "COMMON_JAVA_OPTIONS": "-server -d64 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=60 -XX:+UseCMSInitiatingOccupancyOnly -XX:MaxPermSize=256m -XX:+UseCompressedOops -XX:+ExplicitGCInvokesConcurrent -XX:+CMSClassUnloadingEnabled -XX:+CMSParallelRemarkEnabled" 
   },
-  "cmd": "echo $LOOKUPGROUPS; chmod a+x get-xap.sh && ./get-xap.sh install"
+  "cmd": "chmod a+x get-xap.sh && chmod a+x gs-agent.sh && ./get-xap.sh install && ./get-xap.sh run"
 }
