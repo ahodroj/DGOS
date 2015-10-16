@@ -62,7 +62,8 @@ fi;
 
 
 if [ "$1" == "start" ]; then
-	# Compare if the NIC_ADDR of this machine matches one of the addresses of the LU
+	# Compare if the NIC_ADDR of this machine matches one of the addresses of the LUS
+	echo "Checking if we are a management node"
 	IFS=","
 	export MGMT_NODE=`for v in $LOOKUPLOCATORS; do if [ $NIC_ADDR = $v ];  then echo "1"; fi; done`
 
@@ -72,14 +73,18 @@ if [ "$1" == "start" ]; then
 		export GSM_COUNT="0"
 	fi
 
+	echo "Setting heap size to $GSC_HEAP_SIZE"
 	export GSC_JAVA_OPTIONS="${COMMON_JAVA_OPTIONS} -Xmx$GSC_HEAP_SIZE -Xms$GSC_HEAP_SIZE -Dcom.gs.zones=$GSC_ZONE"
 
 	# Start gs-agent
+	echo "LAUNCHING XAP GRID SERVICE AGENT WITH GSC=$GSC_COUNT and GSM=$GSM_COUNT"
 	nohup $JSHOMEDIR/bin/gs-agent.sh gsa.gsc $GSC_COUNT gsa.global.gsm 0 gsa.global.lus 0 gsa.gsm $GSM_COUNT gsa.lus $GSM_COUNT &> $APP_DIR/logs/$ZONE-gs-agent-console.log &
-
+	
 	# Start gs-webui if this is a management machine
 	if [ $GSM_COUNT = "1" ]; then
+		echo "Launching web-ui since $NIC_ADDR is a management node"
 		nohup ${JSHOMEDIR}/bin/gs-webui.sh $* &> $APP_DIR/gs-agent-webui.log & 
+		echo "XAP Web UI is running at http://$NIC_ADDR:8099"
 	fi
 	
 fi;
