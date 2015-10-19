@@ -1,6 +1,6 @@
 {
   "id": "xap",
-  "instances": 1,
+  "instances": 5,
   "cpus": 2,
   "mem": 2048,
   "uris": [
